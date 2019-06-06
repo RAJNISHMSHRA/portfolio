@@ -1,0 +1,335 @@
+
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+header{
+    position:absolute;
+    left: 0;
+    right: 0;
+    clear: both;
+    overflow: auto;
+}
+hr{
+    border: 2px solid white;
+    width:5em;
+}
+/* neon -animation effect */
+.name{
+    font-size: 5em;
+    /*color:#18ba60;*/
+    color:white;
+    background:rgba(0,0,0);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin:0;
+}
+.neon-wrapper{
+    display: inline-flex;
+    filter: brightness(200%);
+    overflow: hidden;
+}
+.name::before {
+    content: 'RAJNISH MISHRA';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+    
+}
+.gradient{
+    background: linear-gradient(114.5793141156962deg, rgba(6, 227, 250,1) 4.927083333333334%,rgba(229, 151, 64,1) 97.84374999999999%);
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    
+    mix-blend-mode: multiply;
+}
+.dodge {
+    background: radial-gradient(circle,white,black 35%) center / 25% 25%;
+    position: absolute;
+    top:-100%;
+    left:-100%;
+    right:0;
+    bottom:0;
+        mix-blend-mode: color-dodge;
+    animation: dodge-area 3s linear infinite;
+}
+@keyframes dodge-area {
+    to {
+        transform: translate(50%,50%);
+    }
+}
+
+.navigation ul{
+    list-style: none;
+    margin: 0 auto;
+}
+.navigation li{
+    display: inline-block;
+    margin: 1em;
+}
+.navigation a {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5em;
+    color:#ffff;
+}
+.navigation a:hover{
+    color:#18ba60; 
+}
+.intro{
+    background: linear-gradient(90deg,rgba(0,0,0,0.5),rgba(0,0,0,0.8)), url(b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    padding: 10em 0;
+    color: white;
+}
+.content {
+    margin-top: 5em;
+    overflow: auto;
+    
+}
+.content h1{
+    margin-top: 1.5em;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.content span{
+    font-size: 0.5em;
+    font-weight: 400;
+    display: block;
+}
+.btn-intro{
+    padding:0.5em 2em;
+    margin-top: 1em;
+    background:#18ba60;
+    color:white;
+    border:2px solid #18ba60;
+    text-transform: uppercase;
+    transition: all 0.2s linear ;
+}
+.btn-intro:hover {
+    background: white;
+    color:black;
+    
+}
+.about-me{
+    padding:5em 0;
+    overflow: auto;
+    
+}
+.about-me h4{
+    color:#18ba60;
+}
+.about-me{
+    
+}
+.content-wrap{
+    width:90%;
+    margin: 0 auto;
+}
+.col-narrow{
+    float: left;
+    overflow: hidden;
+    margin-top:2em;
+    clear:both;
+    text-align: left;
+    
+}
+.col-narrow h2,h3,p{
+    margin:5px 0;
+    
+}
+.col-wide{
+    float:right;
+    overflow: hidden;
+    text-align: left;
+    margin-top:2em;
+    width:70%;
+}
+.social-icons ul{
+    list-style:none;
+    padding:0;
+}
+.social-icons li{
+    text-decoration: none;
+    display:inline-block;
+    padding:5px;
+    
+}
+.social-icons a {
+    border-radius:50%;
+    border :2px solid #333333;
+    width:40px;
+    height:40px;
+    display:block;
+    text-align: center;
+    line-height:40px;
+    color:#44444444;
+    transition: all 0.2s ease-in;
+}
+.social-icon :hover{
+    color:18ba60;
+    border:1px solid 18ba60;
+}
+/* Box */
+
+	.thumbnails {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: stretch;
+		-webkit-align-items: stretch;
+		-ms-align-items: stretch;
+		align-items: stretch;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+		.thumbnails .box {
+			margin: 0 1em 2em 1em;
+			width: 30%;
+		}
+
+			@media screen and (max-width: 1280px) {
+
+				.thumbnails .box {
+					width: 45%;
+				}
+
+			}
+
+			@media screen and (max-width: 736px) {
+
+				.thumbnails .box {
+					width: 100%;
+				}
+
+			}
+
+/* Box */
+
+	.box {
+		border-radius: 4px;
+		margin-bottom: 2em;
+		background: #2c2c32;
+		text-align: center;
+	}
+
+		.box > :last-child,
+		.box > :last-child > :last-child,
+		.box > :last-child > :last-child > :last-child {
+			margin-bottom: 0;
+		}
+
+		.box .image.fit {
+			margin: 0;
+		}
+
+		.box .image img {
+			border-radius: 4px 4px 0 0;
+		}
+
+		.box .inner {
+			padding: 1.5em;
+			width: 100% !important;
+		}
+
+			@media screen and (max-width: 480px) {
+
+				.box .inner {
+					padding: 1em;
+				}
+
+			}
+
+		.box.alt {
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+		}
+/* skills */
+#skills{
+    margin-left: 20%;
+    display: inline;
+}
+.skilltitle {
+text-align: right;
+font-weight: 600;
+padding-right: 0px;
+}
+.progress {
+border-radius: 0px;
+height: 15px;
+margin-top: 5px;
+background-color: #D6D6D6;
+}
+.progress .progress-bar {
+background-color:#18ba60 ;
+}
+/* Icon */
+
+	.icon {
+		text-decoration: none;
+		border-bottom: none;
+		margin: 50%;
+        display: inline-block;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+
+.work{
+    padding:5em 0;
+    background: linear-gradient(90deg,rgba(0,0,0,0.7),rgba(24,186,96)), url(C:/Users/me/Downloads/u.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position : center center;
+    color:#ffff;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+.contact-me{
+    padding:5em 0;
+    overflow: auto;
+}
+.footer{
+    background: black;
+    padding:5em 0;
+    color:white;
+    overflow:auto;
+}
+.detail{
+    color: black;
+    font-size: 16px;
+    box-shadow: 0px 0px 1px 0 solid black;
+}
